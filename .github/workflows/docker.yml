@@ -1,0 +1,28 @@
+name: Build and Test Docker Image
+
+on:
+  push:
+    branches:
+      - main # Change to 'master' if your default branch is 'master'
+  pull_request:
+    branches:
+      - main # Change to 'master' if your default branch is 'master'
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - name: Set up Docker Buildx
+        uses: docker/setup-buildx-action@v1
+
+      - name: Build Docker image
+        run: |
+          docker build -t my-flask-app .
+
+      - name: Run tests
+        run: |
+          docker run --rm my-flask-app pytest  # Assuming you have tests set up with pytest
