@@ -1,0 +1,19 @@
+[tool.poetry]
+name = "california-housing-pipeline"
+version = "0.1.0"
+description = ""
+authors = ["dnanad <ananddeshpande13@gmail.com>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.12"
+scikit-learn = "^1.5.2"
+pandas = "^2.2.3"
+flask = "^3.0.3"
+numpy = "^2.1.1"
+joblib = "^1.4.2"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
