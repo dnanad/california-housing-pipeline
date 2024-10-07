@@ -18,5 +18,5 @@ ENV FLASK_ENV=production
 
 EXPOSE 5000
 
+# Use Poetry to run the app with Python
 CMD ["poetry", "run", "python", "app.py"]
-
